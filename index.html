@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarumathi A — Portfolio</title>
+<meta name="description" content="SARUMATHI A — Aspiring IT Engineer portfolio">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🦉</text></svg>">
+<link rel="preconnect" href="https://unpkg.com">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#f7f7f2;--ink:#111713;--muted:#68716c;--green:#155c45;--green2:#dceee6;--dark:#10231c;--white:#fff;--line:#dfe5e1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(247,247,242,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(223,229,225,.8)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 1.25rem "Space Grotesk"}.brand i{color:var(--green);font-style:normal}.links{display:flex;align-items:center;gap:28px;font-size:.9rem;color:#4d5752}.links a:hover{color:var(--green)}.hire{background:var(--dark);color:white!important;padding:10px 17px;border-radius:99px}
+.hero{min-height:790px;padding-top:130px;display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+.kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:700}.hero h1{font:700 clamp(3.6rem,7vw,7.1rem)/.9 "Space Grotesk";letter-spacing:-.07em;margin:20px 0}.hero h1 span{color:var(--green)}.lead{font-size:1.1rem;color:var(--muted);max-width:600px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:13px 18px;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:.9rem;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.main{background:var(--dark);border-color:var(--dark);color:white}
+.photo-frame{background:var(--green2);padding:20px;border-radius:34px;transform:rotate(2deg);box-shadow:0 25px 70px rgba(16,35,27,.12)}.photo{height:590px;border-radius:25px;overflow:hidden;position:relative;background:#ddd}.photo img{width:100%;height:100%;object-fit:cover;object-position:center 34%}.photo-label{position:absolute;bottom:17px;left:17px;background:rgba(255,255,255,.93);padding:9px 13px;border-radius:999px;font-size:.75rem;font-weight:700}
+section{padding:100px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.head h2{font:600 clamp(2.4rem,4vw,4rem)/1 "Space Grotesk";letter-spacing:-.05em;margin:8px 0 0}.head p{max-width:470px;color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.statement{font:600 2rem/1.25 "Space Grotesk"}.copy{color:var(--muted);font-size:1.02rem}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.stat{padding:18px;background:white;border:1px solid var(--line);border-radius:18px}.stat b{font:700 1.6rem "Space Grotesk";display:block}.stat small{color:var(--muted)}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(16,35,27,.08)}.num{font-size:.74rem;color:var(--muted);letter-spacing:.1em;font-weight:700}.card h3{font:600 1.55rem "Space Grotesk";margin:17px 0 9px}.card p{font-size:.92rem;color:var(--muted);margin:0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tags span{font-size:.7rem;font-weight:700;background:#eef2ef;padding:6px 9px;border-radius:7px}.card-link{color:var(--green);font-size:.84rem;font-weight:700;margin-top:24px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}.skillbox{border-radius:24px;padding:30px;background:var(--dark);color:white}.skillbox.light{background:white;color:var(--ink);border:1px solid var(--line)}.skillbox h3{font:600 1.25rem "Space Grotesk";margin:0 0 20px}.chips{display:flex;gap:9px;flex-wrap:wrap}.chips span{border:1px solid rgba(255,255,255,.17);border-radius:999px;padding:8px 11px;font-size:.8rem}.light .chips span{border-color:var(--line)}
+.timeline{border-left:1px solid var(--line);margin-left:8px}.event{position:relative;padding:0 0 36px 32px}.event:before{content:"";position:absolute;left:-6px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px var(--bg)}.event .date{color:var(--green);font-size:.75rem;font-weight:700}.event h3{font:600 1.25rem "Space Grotesk";margin:5px 0}.event p{color:var(--muted);margin:0}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cert{background:white;border:1px solid var(--line);border-radius:18px;padding:21px}.cert b{font-family:"Space Grotesk";display:block}.cert p{color:var(--muted);font-size:.82rem}
+.contact{background:var(--dark);color:white;border-radius:34px;padding:60px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:end}.contact h2{font:600 clamp(2.7rem,5vw,5rem)/.95 "Space Grotesk";letter-spacing:-.06em;margin:10px 0}.contact p{color:#b8c7c0;max-width:560px}.contact a{display:block;border:1px solid rgba(255,255,255,.15);padding:14px 16px;border-radius:12px;margin-top:10px}.contact a:hover{background:rgba(255,255,255,.07)}
+footer{padding:30px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
+
+.contact-form{display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea{
+  width:100%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.055);
+  color:#fff;border-radius:12px;padding:14px 15px;font:inherit;outline:none
+}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#9eafa7}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#8fc9b1;background:rgba(255,255,255,.08)}
+.contact-form textarea{min-height:135px;resize:vertical}
+.send-btn{
+  border:0;background:#dceee6;color:#10231c;padding:14px 18px;border-radius:12px;
+  font-weight:700;font:700 .9rem "DM Sans";cursor:pointer;transition:.2s
+}
+.send-btn:hover{transform:translateY(-2px);background:#fff}
+.direct-contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.direct-contact a{margin:0!important;padding:9px 12px!important;border-radius:999px!important;font-size:.78rem}
+
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:115px}.photo-frame{max-width:450px;margin:auto}.photo{height:520px}.about,.skills,.contact{grid-template-columns:1fr}.projects,.certs{grid-template-columns:1fr}.head{display:block}.head p{margin-top:15px}.contact{padding:35px 25px}.stats{grid-template-columns:1fr 1fr 1fr}}
+
+/* Portfolio polish */
+.brand{display:flex;align-items:center;gap:7px;letter-spacing:-.02em}.owl{font-size:1.05rem;display:inline-flex;filter:grayscale(.1);transform:translateY(-1px)}
+.links a{display:flex;align-items:center;gap:6px}.links svg{width:15px;height:15px;stroke-width:2}
+.resume-nav{border:1px solid var(--line);padding:9px 13px;border-radius:10px;background:#fff}
+.resume-nav:hover{border-color:#b8c8c0!important}
+.btn{display:inline-flex;align-items:center;gap:8px}.btn svg{width:16px;height:16px}
+.cert-title-row{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.cert-note{display:flex;align-items:center;gap:6px;color:var(--green);font-size:.75rem;font-weight:700}
+.cert-note svg{width:15px;height:15px}
+.cert{position:relative}.cert-icon{width:38px;height:38px;display:grid;place-items:center;background:var(--green2);color:var(--green);border-radius:11px;margin-bottom:17px}.cert-icon svg{width:19px}
+.cert-link{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:.78rem;font-weight:800;margin-top:7px}.cert-link svg{width:14px;height:14px}
+.direct-contact a{display:flex!important;align-items:center;gap:7px}.direct-contact svg{width:15px;height:15px}
+.send-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px}.send-btn svg{width:16px;height:16px}
+.form-status{min-height:20px;margin:0;color:#b8c7c0;font-size:.82rem}
+.form-status.success{color:#9bd2ba}.form-status.error{color:#ffb4b4}
+@media(max-width:800px){.resume-nav{display:none!important}.cert-title-row{display:block}.cert-note{margin-bottom:16px}}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="brand" href="#top" aria-label="SARUMATHI A home">
+      SARUMATHI A <span class="owl" title="Night Owl — I work when the world sleeps" aria-label="Night Owl">🦉</span>
+    </a><div class="links">
+      <a href="#about"><i data-lucide="user-round"></i> About</a>
+      <a href="#projects"><i data-lucide="folder-kanban"></i> Projects</a>
+      <a href="#skills"><i data-lucide="code-2"></i> Skills</a>
+      <a href="#education"><i data-lucide="graduation-cap"></i> Education</a>
+      <a class="resume-nav" href="https://drive.google.com/file/d/16a4o1YrdGJ992hfdkuAGVSKC1NrZNXZE/view?usp=drivesdk" target="_blank" rel="noopener" download><i data-lucide="download"></i> Resume</a>
+      <a class="hire" href="#contact"><i data-lucide="send"></i> Let’s connect</a>
+    </div></div></nav>
+
+<main id="top">
+<section class="hero wrap">
+<div>
+<div class="kicker">Aspiring IT Engineer</div>
+<h1>Hi, I’m <span>SARUMATHI A.</span></h1>
+<p class="lead">Information Technology student building practical digital solutions through full-stack development, artificial intelligence and modern web technologies.</p>
+<div class="buttons"><a class="btn main" href="#projects"><i data-lucide="sparkles"></i> Explore my work</a><a class="btn" href="https://github.com/Sarumathi-a" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a><a class="btn" href="SARUMATHI_A_Resume.pdf" target="_blank" rel="noopener" download><i data-lucide="file-down"></i> Download Resume</a></div>
+</div>
+<div class="photo-frame">
+    <div class="photo">
+        <img src="/images/profile.jpg" alt="Sarumathi A">
+        <div class="photo-label">B.Tech IT · MIT, Anna University</div>
+    </div>
+</div>
+
+</section>
+
+<section id="about"><div class="wrap"><div class="head"><div><div class="kicker">01 — About</div><h2>Curious by nature.<br>Practical by approach.</h2></div><p>A concise introduction based on the profile in my resume.</p></div>
+<div class="about"><div class="statement">I enjoy learning emerging technologies and turning ideas into useful software.</div><div class="copy">I'm an Information Technology student at Madras Institute of Technology, Anna University, with a strong foundation in problem solving and an interest in developing practical digital solutions. I enjoy exploring AI tools, web technologies and software development while applying creative thinking to real-world challenges.<div class="stats"><div class="stat"><b>7.3</b><small>CGPA / 10</small></div><div class="stat"><b>10+</b><small>AI tools explored</small></div><div class="stat"><b>4</b><small>Featured projects</small></div></div></div></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="head"><div><div class="kicker">02 — Selected Work</div><h2>Projects that<br>show my range.</h2></div><p>From full-stack applications to AI-powered tools, these projects represent my hands-on development experience.</p></div>
+<div class="projects">
+<article class="card"><div><div class="num">01 / AI</div><h3>AI Tools Exploration Project</h3><p>Explored and practically applied 10+ AI tools across content creation, research, productivity, design and automation, evaluating their capabilities through hands-on tasks.</p><div class="tags"><span>Generative AI</span><span>Prompt Engineering</span><span>AI Tools</span></div></div><a class="card-link" href="https://github.com/Sarumathi-a/AI-Tool-Exploration.git" target="_blank" rel="noopener">GitHub ↗</a></article>
+<article class="card"><div><div class="num">02 / FULL-STACK</div><h3>Online Voting System</h3><p>Developed a web-based voting system with registration, authentication, vote casting and live election result tracking, using Spring Data JPA with MySQL.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>Spring MVC</span><span>MySQL</span><span>Thymeleaf</span></div></div><a class="card-link" href="https://github.com/Sarumathi-a/online_voting" target="_blank" rel="noopener">GitHub ↗</a></article>
+<article class="card"><div><div class="num">03 / WEB</div><h3>E-Commerce Grocery Website</h3><p>Built a responsive grocery e-commerce website with intuitive product browsing, interactive product displays and shopping cart functionality.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div><a class="card-link" href="https://github.com/Sarumathi-a/E-Commerce-Grocery-Website" target="_blank" rel="noopener">GitHub ↗</a></article>
+<article class="card"><div><div class="num">04 / AI + COMPUTER VISION</div><h3>Zero Distraction Learning Companion</h3><p>Created an AI-powered learning companion using computer vision to detect drowsiness, gaze direction, head pose and off-screen distractions in real time.</p><div class="tags"><span>Python</span><span>Flask</span><span>OpenCV</span><span>MediaPipe</span></div></div><a class="card-link" href="https://github.com/Sarumathi-a/zero-distraction-companion" target="_blank" rel="noopener">GitHub ↗</a></article>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><div class="head"><div><div class="kicker">03 — Toolkit</div><h2>Technologies I work with.</h2></div></div>
+<div class="skills"><div class="skillbox"><h3>Technical Skills</h3><div class="chips"><span>C++</span><span>Python</span><span>Java</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>React.js</span><span>Spring Boot</span><span>SQL</span><span>SQLite</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Excel</span></div></div>
+<div class="skillbox light"><h3>Strengths & Interests</h3><div class="chips"><span>Problem Solving</span><span>Critical Thinking</span><span>Team Collaboration</span><span>Adaptability</span><span>Full-Stack Development</span><span>Artificial Intelligence</span><span>Generative AI</span><span>Software Development</span></div></div></div></div></section>
+
+<section id="education"><div class="wrap"><div class="head"><div><div class="kicker">04 — Education</div><h2>My learning journey.</h2></div></div>
+<div class="timeline"><div class="event"><div class="date">2023 — PRESENT</div><h3>B.Tech Information Technology</h3><p>Madras Institute of Technology — Anna University · CGPA 7.3 / 10</p></div><div class="event"><div class="date">2022 — 2023</div><h3>HSC / 12th Grade</h3><p>Sri Jeayandra Saraswathi School · 95.5%</p></div></div>
+<div class="cert-title-row"><h3 style="font:600 1.3rem 'Space Grotesk';margin:30px 0 16px">Certifications</h3><span class="cert-note"><i data-lucide="badge-check"></i> Verified credentials</span></div>
+<div class="certs">
+  <div class="cert">
+    <div class="cert-icon"><i data-lucide="database"></i></div>
+    <b>Python for Data Science — NPTEL</b>
+    <p>Elite Score: 56%</p>
+    <a class="cert-link" href="https://drive.google.com/file/d/10UdHOwd1VEU3V6yUcLHyOokrLSdm_sb9/view?usp=drivesdk" target="_blank" rel="noopener"><i data-lucide="external-link"></i> View Certificate</a>
+  </div>
+  <div class="cert">
+    <div class="cert-icon"><i data-lucide="layout-template"></i></div>
+    <b>Build Your Own Responsive Website — CCBP 4.0</b>
+    <p>Bootstrap · Flexbox · NxtWave Academy</p>
+    <a class="cert-link" href="https://drive.google.com/file/d/1uzJs1u7wyIuK7ER3L3uqIwpIoQvjbHFS/view?usp=drivesdk" target="_blank" rel="noopener"><i data-lucide="external-link"></i> View Certificate</a>
+  </div>
+  <div class="cert">
+    <div class="cert-icon"><i data-lucide="graduation-cap"></i></div>
+    <b>CCBP 4.0 — Industry-Oriented Technical Program</b>
+    <p>Programming, problem solving, web development and databases.</p>
+    <span class="cert-link" aria-label="Certificate link not provided"></span>
+  </div>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<div class="contact">
+  <div>
+    <div class="kicker" style="color:#9bd2ba">05 — Contact</div>
+    <h2>Let's talk about your next idea.</h2>
+    <p>Have an opportunity, project idea or just want to connect? Send me a message and I’ll get back to you.</p>
+    <div class="direct-contact">
+      <a href="mailto:kaviyasarumathi@gmail.com">Email ↗</a>
+      <a href="tel:+916383774956"><i data-lucide="phone"></i> +91 63837 74956</a>
+      <a href="https://github.com/Sarumathi-a" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/sarumathi-a-/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+    <input id="senderName" type="text" placeholder="Your name" required>
+    <input id="senderEmail" type="email" placeholder="Your email" required>
+    <input id="senderSubject" type="text" placeholder="Subject" required>
+    <textarea id="senderMessage" placeholder="Write your message..." required></textarea>
+    <button class="send-btn" id="sendBtn" type="submit"><i data-lucide="send"></i> Send Message</button><p id="formStatus" class="form-status" role="status"></p>
+  </form>
+</div>
+</div></section>
+</main>
+<footer class="wrap"><span>© 2026 Sarumathi A</span><span>Built with purpose.</span></footer>
+
+<script>
+lucide.createIcons();
+
+const contactForm = document.getElementById("contactForm");
+const sendBtn = document.getElementById("sendBtn");
+const formStatus = document.getElementById("formStatus");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  formStatus.className = "form-status";
+  formStatus.textContent = "Sending…";
+  sendBtn.disabled = true;
+
+  const payload = {
+    name: document.getElementById("senderName").value.trim(),
+    email: document.getElementById("senderEmail").value.trim(),
+    subject: document.getElementById("senderSubject").value.trim(),
+    message: document.getElementById("senderMessage").value.trim()
+  };
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok || data.success !== true) {
+      throw new Error(data.message || "Unable to send message.");
+    }
+
+    formStatus.className = "form-status success";
+    formStatus.textContent = "Message sent successfully. Thank you!";
+    contactForm.reset();
+  } catch (error) {
+    console.error("Contact form error:", error);
+    formStatus.className = "form-status error";
+    formStatus.textContent = error.message || "Message could not be sent. Please try again.";
+  } finally {
+    sendBtn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
