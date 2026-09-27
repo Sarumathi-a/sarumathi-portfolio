@@ -48,7 +48,16 @@ def home():
         BASE_DIR,
         "index.html"
     )
+# ---------------------------------------------------------
+# SERVE PORTFOLIO FILES
+# ---------------------------------------------------------
 
+@app.route("/<path:filename>")
+def serve_file(filename):
+    return send_from_directory(
+        BASE_DIR,
+        filename
+    )
 
 # ---------------------------------------------------------
 # CONTACT FORM
